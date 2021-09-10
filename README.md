@@ -1,8 +1,8 @@
 specdims
 ========
 
-Code for A. A. Patil, J. Bovy, G. Eadie, and S. Jaimungal, 2021, `Functional Data Analysis for extracting the Intrinsic Dimensionality of Spectra
-Application:  Chemical Homogeneity in Open Cluster M67`, submitted to ApJ.
+Code for A. A. Patil, J. Bovy, G. Eadie, and S. Jaimungal, 2021, "Functional Data Analysis for extracting the Intrinsic Dimensionality of Spectra
+Application:  Chemical Homogeneity in Open Cluster M67", submitted to ApJ.
 
 AUTHOR
 ------
