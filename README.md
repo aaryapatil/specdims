@@ -2,9 +2,9 @@
 Code for Patil et al. 2021, "Functional Data Analysis for extracting the Intrinsic Dimensionality of Spectra
 Application:  Chemical Homogeneity in Open Cluster M67"
 
-We apply Functional Principal Component Analysis (FPCA) to a large sample of APOGEE giants to extract spectral structure instrinsic to the stars from systematics, and determine its dimensionality. We then apply our Functional Principal Components (FPCs) to constrain chemical homogeneity in open cluster M67. This proves that the FPCs incorporate abundance information and in turn helps validate chemical tagging. Thus, we have the opportunity to chemical tagging in the instrinsic spectral structure defined by our FPCs, which likely has information beyond a limited number of inferred abundances.
+We apply Functional Principal Component Analysis (FPCA) to a large sample of APOGEE giants to extract spectral structure instrinsic to the stars from systematics, and determine its dimensionality. We then apply our Functional Principal Components (FPCs) to constrain chemical homogeneity in open cluster M67. This proves that the FPCs incorporate abundance information and in turn helps validate chemical tagging. Thus, we have the opportunity to perform chemical tagging in the instrinsic spectral structure defined by our FPCs, which likely has information beyond a limited number of inferred abundances.
 
-One of the main constributions of this code is ``fpca.py`` a general-purpose python module for performing FPCA. You can use this code by cloning this repository and importing the module as follows:
+One of the main constributions of this code is ``fpca.py``, a general-purpose python module for performing FPCA. You can use this code by cloning this repository and importing the module as follows:
 
 ```
 import fpca
