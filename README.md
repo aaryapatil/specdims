@@ -41,7 +41,7 @@ delfiSpec
 
 ``delfiSpec`` is a module that provides useful functions to read, process and simulate APOGEE spectra.
 
-This builds on top of [`apogee`](https://github.com/jobovy/apogee>).
+This builds on top of [`apogee`](https://github.com/jobovy/apogee).
 
 apogee_fpca
 -----------
