@@ -48,24 +48,23 @@ def plot_eigenvectors(eigvec, pca_type='fpca'):
                              r'$\Psi_5(\lambda)$', r'$\Psi_6(\lambda)$',
                              r'$\Psi_7(\lambda)$', r'$\Psi_8(\lambda)$',
                              r'$\Psi_9(\lambda)$', r'$\Psi_{10}(\lambda)$'])
-        plt.savefig('fpca_comp.png')
+        plt.savefig('specdims/data/fpca_comp.png')
     else:
         ax0.set_yticklabels([r'$PC_1$', r'$PC_2$', r'$PC_3$', r'$PC_4$',
                              r'$PC_5$', r'$PC_6$', r'$PC_7$', r'$PC_8$',
                              r'$PC_9$', r'$PC_{10}$'])
-        plt.savefig('empca_comp.png')
+        plt.savefig('specdims/data/empca_comp.png')
 
 
-eigenfun_dat = np.loadtxt('data/FPCA_apogee/fpca_dat_eigenvectors_psi_t.dat')
-eigenval_dat = np.loadtxt('data/FPCA_apogee/fpca_dat_eigenvalues_k_cap.dat')
-spec_mean_dat = np.loadtxt('data/FPCA_apogee/fpca_dat_spec_mean.dat')
+eigenfun_dat = np.loadtxt('specdims/data/FPCA_apogee/fpca_dat_eigenvectors_psi_t.dat')
+eigenval_dat = np.loadtxt('specdims/data/FPCA_apogee/fpca_dat_eigenvalues_k_cap.dat')
+spec_mean_dat = np.loadtxt('specdims/data/FPCA_apogee/fpca_dat_spec_mean.dat')
 
-eigenvec_dat = np.loadtxt('data/EMPCA_apogee/empca_dat_eigenvectors_PCs.dat')
-eigenR2_dat = np.loadtxt('data/EMPCA_apogee/empca_dat_eigenvalues_R2.dat')
+eigenvec_dat = np.loadtxt('specdims/data/EMPCA_apogee/empca_dat_eigenvectors_PCs.dat')
+eigenR2_dat = np.loadtxt('specdims/data/EMPCA_apogee/empca_dat_eigenvalues_R2.dat')
 
-eigenvec_sim = np.loadtxt('/geir_data/scr/patil/Latest_PCs/pca_sim.dat')
-eigenval_sim = np.loadtxt('/geir_data/scr/patil/Latest_PCs/pca_percvar_sim.dat')
-spec_mean_sim = np.loadtxt('/geir_data/scr/patil/Latest_PCs/pca_spec_mean_sim.dat')
+eigenvec_sim = np.loadtxt('specdims/data/PCA_sim/pca_sim_eigenvectors_PCs.dat')
+eigenval_sim = np.loadtxt('specdims/data/PCA_sim/pca_sim_eigenvalues_percvar.dat')
 
 
 # ---------------- Plot PCs ----------------
@@ -130,7 +129,7 @@ f.text(0.06, 0.51, 'Cumulative % Variance', va='center', rotation='vertical', fo
 
 plt.subplots_adjust(hspace=0.15)
 
-plt.savefig('eigvals.png')
+plt.savefig('specdims/data/eigvals.png')
 
 
 # ---------------- Model M67 GM member ----------------
@@ -208,5 +207,5 @@ a1.set_ylabel(r'Residuals')
 a1.legend(loc='lower right', fontsize=15)
 f.align_ylabels()
 
-plt.savefig('fpca_model.png')
+plt.savefig('specdims/data/fpca_model.png')
 # -------------------------------------------------

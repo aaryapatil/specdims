@@ -10,6 +10,7 @@ with Functional Principal Component Analysis.
 import numpy as np
 import seaborn as sns
 import matplotlib as mpl
+import pandas as pd
 from apogee.tools.path import change_dr
 from astropy.io import fits
 from apogee.tools import path, elemIndx, paramIndx
@@ -54,8 +55,11 @@ for star_ind, star in enumerate(M67_apogee_GM):
     apogee_fits[star_ind] = np.concatenate(([star['FPARAM'][paramIndx('Teff')],
                                              star['FPARAM'][paramIndx('logg')]], X_H))
 
-# Posterior Distribution for M67 Giant Member 8
-posterior = np.loadtxt('DELFI_fits/Latest_Prior_N_1/GM_8/posterior_samples_3.dat')
+giant_id = 11
+
+# Posterior Distribution for M67 Giant Member 11
+# Change the path to data according to directory structure
+posterior = np.loadtxt(f'specdims/data/SNL/posteriors_M67_{giant_id}.dat')
 
 # Labels for plots
 labels = [r'$T_\mathrm{eff}$', r'$\log g$', 'C', 'N', 'O', 'Na', 'Mg',
@@ -112,9 +116,9 @@ g.map_diag(sns.kdeplot, lw=2, color='black')
 # Highlight elements of interest in the marginals
 for i in range(17):
     for ax in g.axes[i:, i]:
-        ax.axvline(truths[11][i], color='black', linestyle='--', lw=1)
+        ax.axvline(apogee_fits[giant_id][i], color='black', linestyle='--', lw=1)
     for ax in g.axes[i, :i]:
-        ax.axhline(truths[11][i], color='black', linestyle='--', lw=1)
+        ax.axhline(apogee_fits[giant_id][i], color='black', linestyle='--', lw=1)
 
 for ind, ele in enumerate(plot_ele):
     sns.kdeplot(data=posterior[:, ele], ax=g.diag_axes[ele], color=color[ind], lw=6, alpha=0.2)

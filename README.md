@@ -1,8 +1,7 @@
 specdims
 ========
 
-Code for A. A. Patil, J. Bovy, G. Eadie, and S. Jaimungal, 2021, "Functional Data Analysis for extracting the Intrinsic Dimensionality of Spectra;
-Application:  Chemical Homogeneity in Open Cluster M67", submitted to ApJ.
+Code for A. A. Patil, J. Bovy, G. Eadie, and S. Jaimungal, "Functional Data Analysis for Extracting the Intrinsic Dimensionality of Spectra: Application to Chemical Homogeneity in the Open Cluster M67", The Astrophysical Journal. 926, 51 (2022) [ADS](https://ui.adsabs.harvard.edu/abs/2022ApJ...926...51P/abstract)
 
 AUTHOR
 ------
@@ -12,7 +11,7 @@ Main author: Aarya A. Patil
 CITING THIS CODE
 ----------------
 
-Information will soon be updated.
+Aarya A. Patil et al 2022 ApJ 926 51
 
 INTRODUCTION
 ------------
@@ -35,6 +34,8 @@ print(fpca_train_dat.psi_cap_t, fpca_train_dat.perc_var)
 ```
 
 Here ``data`` and ``data_err`` represent the data you want to perform FPCA on and its error. ``50`` represents the number of basis functions. ``basis`` represents the basis functions you want to use; by deafult these are Legendre Polynomials. ``alpha_regression()`` provides the coefficients of regression for generating the functional approximation of data, whereas solve_eigenproblem provides FPCs.
+
+Refer to the notebook ``fpca_test.ipynb`` to understand the basics of FPCA and the usage of ``fpca``.
 
 delfiSpec
 ---------

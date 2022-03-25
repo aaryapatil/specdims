@@ -7,9 +7,9 @@ from delfiSpec import util
 
 
 # ------- FPCs and EM PCs Correlations with theoretical PCs -------
-eigenfun_dat = np.loadtxt('data/FPCA_apogee/fpca_dat_eigenvectors_psi_t.dat')
-eigenvec_dat = np.loadtxt('data/EMPCA_apogee/empca_dat_eigenvectors_PCs.dat')
-eigenvec_sim = np.loadtxt('/geir_data/scr/patil/Latest_PCs/pca_sim.dat')
+eigenfun_dat = np.loadtxt('specdims/data/FPCA_apogee/fpca_dat_eigenvectors_psi_t.dat')
+eigenvec_dat = np.loadtxt('specdims/data/EMPCA_apogee/empca_dat_eigenvectors_PCs.dat')
+eigenvec_sim = np.loadtxt('specdims/data/PCA_sim/pca_sim_eigenvectors_PCs.dat')
 
 for i in range(10):
     print(r'$PC_{}$ & {:.1f} & {:.1f} \\'.format(
@@ -19,7 +19,7 @@ for i in range(10):
 
 # --------------------- Hierarchical Modeling ---------------------
 for ele in ['C', 'N', 'O', 'Na', 'Mg', 'Al', 'Si', 'S', 'K', 'Ca', 'Ti', 'V', 'Mn', 'Ni', 'Fe']:
-    posterior_t = np.loadtxt(f'/data/hierarch/{ele}_H_hierarch_t_v1to10.dat')
+    posterior_t = np.loadtxt(f'specdims/data/hierarch/{ele}_H_hierarch_t.dat')
 
     intervals_t = t.interval(0.68, posterior_t[50:, 0],
                              loc=posterior_t[50:, 1], scale=posterior_t[50:, 2])
@@ -44,7 +44,7 @@ _, M67_GM_apogee = apCat.read_OCCAM_cluster()
 M67_constrain = np.zeros(shape=(28, 100000, 17))
 
 for ind in np.arange(28):
-    M67_constrain[ind] = np.loadtxt(f'data/posteriors_M67_{ind}.dat')
+    M67_constrain[ind] = np.loadtxt(f'specdims/data/posteriors_M67_{ind}.dat')
 
 # Labels for columns
 labels = [r'$T_{eff}$', r'log $g$', r'$[$C/H$]$', r'$[$N/H$]$', r'$[$O/H$]$', r'$[$Na/H$]$', r'$[$Mg/H$]$', r'$[$Al/H$]$',

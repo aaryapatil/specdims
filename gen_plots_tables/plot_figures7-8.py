@@ -88,7 +88,8 @@ cbar.ax.get_yaxis().labelpad = 25
 cbar.ax.set_ylabel('[Fe/H]', rotation=270)
 
 # Save APOGEE sample figure
-plt.savefig('data/APOGEE_sample.png')
+# Change the path to data according to directory structure
+plt.savefig('specdims/data/APOGEE_sample.png')
 
 # ------------------- M67 Spectral Sample -------------------
 
@@ -119,4 +120,4 @@ cbar.ax.get_yaxis().labelpad = 25
 cbar.ax.set_ylabel('[Fe/H]', rotation=270)
 
 # Save M67 sample figure
-plt.savefig('data/M67_sample.png')
+plt.savefig('specdims/data/M67_sample.png')

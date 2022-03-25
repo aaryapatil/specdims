@@ -57,8 +57,9 @@ for star_ind, star in enumerate(M67_GM_apogee):
 # ------------- Read M67 posteriors -------------
 M67_constrain = np.zeros(shape=(28, 100000, 17))
 
+# Change the path to data according to directory structure
 for ind in np.arange(28):
-    M67_constrain[ind] = np.loadtxt(f'data/posteriors_M67_{ind}.dat')
+    M67_constrain[ind] = np.loadtxt(f'specdims/data/posteriors_M67_{ind}.dat')
 
 
 def lkpost(ele_no):

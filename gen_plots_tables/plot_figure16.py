@@ -51,8 +51,9 @@ def plot_hierarch(posterior, hist=False):
         ax.vlines(median, 0, ax.get_ylim()[1], color='teal', lw=2)
         ax.fill_between(np.array([quartile1, quartile3]), y1=0, y2=ax.get_ylim()[1], color='lightblue', alpha=0.3)
     
-    plt.savefig('plots/Fe_H.png')
+    plt.savefig('specdims/data/Fe_H.png')
 
 
-posterior = np.loadtxt('hierarch/Fe_H_hierarch_t_v1to10.dat')
+# Change the path to data according to directory structure
+posterior = np.loadtxt('specdims/data/hierarch/Fe_H_hierarch_t.dat')
 plot_hierarch(posterior, hist=False)

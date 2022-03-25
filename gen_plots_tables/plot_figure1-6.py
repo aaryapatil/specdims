@@ -137,7 +137,7 @@ ax.set_xlabel(r'Wavelength $\lambda(\AA)$')
 ax.set_ylabel(r'Spectrum number $n$ $[\mathbf{y}_n]$')
 ax.set_ylim(-2.1, 1.5)
 
-plt.savefig('data_case_study.png')
+plt.savefig('specdims/data/data_case_study.png')
 
 
 # ------------------- FPCA of Samples -------------------
@@ -197,7 +197,7 @@ axins.set_xticklabels(np.arange(1, 6), fontsize=12)
 # Indicate the wavelength for which we create an inset
 plt.text(-2.3, 0.64, r'$\lambda_x$', fontsize=18, color='black')
 
-plt.savefig('basis_case_study.png')
+plt.savefig('specdims/data/basis_case_study.png')
 
 
 # ------------------- Plot Functional Approximation -------------------
@@ -252,7 +252,7 @@ ax[1].yaxis.set_minor_locator(MultipleLocator(0.025))
 ax[1].set_xlabel(r'Wavelength $\lambda(\AA)$')
 ax[1].set_ylabel('Residuals')
 
-plt.savefig('func_approx_case_study.png')
+plt.savefig('specdims/data/func_approx_case_study.png')
 
 
 # ------------------- PCA of Samples -------------------
@@ -363,7 +363,7 @@ ax[1][1].legend(loc='upper right', fontsize=25)
 plt.text(-8.3, 170, 'FPCA', fontsize=50, weight='bold')
 plt.text(-8.3, 45, 'PCA', fontsize=50, weight='bold')
 
-plt.savefig('pc_case_study.png')
+plt.savefig('specdims/data/pc_case_study.png')
 
 print(f'Mean Slope of PC1 for the original + systematic sample'
        'is {(pca_org_sys.components_[0][-1] - pca_org_sys.components_[0][0])/(wave[200] - wave[0])}')
@@ -456,7 +456,7 @@ cbar_2.ax.set_ylabel('Covariance')
 plt.text(-0.098, 0.0011, 'FPCA', fontsize=36, weight='bold')
 plt.text(-0.098, 0.00008, 'PCA', fontsize=36, weight='bold')
 
-plt.savefig('cov_case_study.png')
+plt.savefig('specdims/data/cov_case_study.png')
 
 
 # ------------------- How to choose K and J? -------------------
@@ -513,5 +513,5 @@ ax1.set_yticks([0, 0.25, 0.5, 0.75, 1])
 ax1.set_yticklabels([3/5, 4/5, 1, 6/5, 7/5])
 ax1.set_ylabel('$e/0.005$')
 
-plt.savefig('mse_case_study.png')
+plt.savefig('specdims/data/mse_case_study.png')
 # --------------------------------------------------------
