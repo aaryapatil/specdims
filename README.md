@@ -11,7 +11,7 @@ Main author: Aarya A. Patil
 CITING THIS CODE
 ----------------
 
-Aarya A. Patil et al 2022 ApJ 926 51
+Aarya A. Patil et al. 2022 ApJ 926 51
 
 INTRODUCTION
 ------------
