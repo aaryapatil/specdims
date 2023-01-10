@@ -24,9 +24,9 @@ fpca
 One of the main contributions of this code is ``fpca.py``, a general-purpose python module for performing FPCA. ``fpca`` is currently not yet available on PyPI, but it can be used by downloading the source code or cloning the GitHub repository and importing the module as follows:
 
 ```
-from fpca import FPCA
+from fpca import Fpca
 
-fpca_train_dat = FPCA(data, 50, phi=basis, xerr=data_err)
+fpca_train_dat = Fpca(data, 50, phi=basis, xerr=data_err)
 fpca_train_dat.alpha_regression()
 fpca_train_dat.solve_eigenproblem()
 
